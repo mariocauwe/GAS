@@ -22,7 +22,7 @@ X-Goog-Resource-State: sync
 X-Goog-Message-Number: 1
    */
 app.post('/gas',(request, response) => {
-    logger.info('POST /gas', request.get('X-Goog-Channel-Token'), request.get('X-Goog-Resource-ID'))
+    logger.info('POST /gas', 'token: ' + request.get('X-Goog-Channel-Token'),'resource UD:' + request.get('X-Goog-Resource-ID'), 'message number: ' + request.get('X-Goog-Message-Number'),)
     response.send('/gas')
   })
 
